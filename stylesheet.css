@@ -1,10 +1,35 @@
 body {
-
   background-color: rgb(94, 92, 94);
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.background {
+  position: relative;
+}
+
+.background::before {
+  content: "";
+  top: 0px;
+  right: 20px;
+  bottom: 0px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-image: url("mariokart-background.jpeg");
+  opacity: 0.1;
+  position: absolute;
+  background-repeat: repeat;
 }
 
 div.border {
+  position: relative;
   border: 10px solid rgb(158, 57, 57);
   padding: 50px;
   margin: 20px;
@@ -101,6 +126,7 @@ ul.horizontal_menu .dropdown:hover .dropdown-content {
 
 img.right {
   float: right;
+  margin-top: 20px;
 }
 
 ul.geschiedenis {
@@ -109,4 +135,59 @@ ul.geschiedenis {
 
 ul.geschiedenis li {
   display: list-item;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left {
+  justify-content: space-between;
+}
+
+.container img {
+  height: 100px;
+}
+
+.image {
+  flex-basis: 25%
+}
+
+.rounded {
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.pp-container {
+  width: max-content;
+  max-width: 100%;
+  height: 30%;
+  background: #e6dfdfaa;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: block;
+  box-sizing: border-box;
+}
+.pp-container h3 {
+  margin: 0px;
+  font-size: 2rem;
+}
+.pp-container p {
+  margin: 0px;
+  margin-right: 1rem;
+}
+.pp-container img {
+  height: 100%;
+}
+.about-text-area {
+width: 60%;
 }
